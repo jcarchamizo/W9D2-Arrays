@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f1f1;
+    padding: 30px;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  label, input, button {
+    font-size: 1rem;
+    margin: 5px;
+  }
+
+  input {
+    width: 50px;
+    padding: 5px;
+  }
+
+  button {
+    padding: 8px 12px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #1c5980;
+  }
+
+  .tabla {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+  }
+
+  .tabla h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
