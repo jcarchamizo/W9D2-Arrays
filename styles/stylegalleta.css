@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body {
+  font-family: 'Comfortaa', cursive, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+  user-select: none;
+}
+
+button {
+  background-color: #ffb74d;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(255,183,77,0.4);
+  transition: background-color 0.3s ease;
+  margin-bottom: 30px;
+  user-select: none;
+}
+
+button:hover {
+  background-color: #ffa726;
+}
+
+.resultado {
+  background-color: #fff8e1;
+  padding: 25px 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(255, 183, 77, 0.3);
+  font-size: 1.2rem;
+  color: #5d4037;
+  line-height: 1.5;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  user-select: none;
+}
+
+.resultado.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.resultado strong {
+  color: #bf360c;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+/* Confetti container */
+#confetti-container {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: visible;
+  z-index: 9999;
+}
+
+/* Confetti pieces */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffca28;
+  opacity: 0.9;
+  border-radius: 2px;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  will-change: transform, opacity;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
